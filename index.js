@@ -100,7 +100,8 @@ export function increment(count) {
  *
  */
 export function getTaxicabDistance(from, to) {
-  // TODO
+  let sum = Math.abs(from.x - to.x) + Math.abs(from.y - to.y);
+  return sum;
 }
 
 /**

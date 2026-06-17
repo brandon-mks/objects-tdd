@@ -210,5 +210,16 @@ export function zip(keys, values) {
  * countCharacters("aAa"); // {a: 2, A: 1}
  */
 export function countCharacters(word) {
-  // TODO
+  let object = {};
+  for (let i = 0; i < word.length; i++) {
+    //why can I just do
+    //object[word[i]] += 1; or object.word[i] += 1;
+    //shouldn't that automatically search for key name word[i] and then either set value to 1 or add 1 depending on if it already exists?
+    if (!object[word[i]]) {
+      object[word[i]] = 1;
+    } else {
+      object[word[i]] += 1;
+    }
+  }
+  return object;
 }
